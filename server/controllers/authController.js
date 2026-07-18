@@ -167,7 +167,7 @@ const login = async (req,res)=>{
 
         }
 
-
+        console.log("JWT SECRET VALUE:", process.env.JWT_SECRET);
 
         const token = jwt.sign(
 

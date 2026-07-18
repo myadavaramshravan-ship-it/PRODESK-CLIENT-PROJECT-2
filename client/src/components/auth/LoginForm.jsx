@@ -5,30 +5,29 @@ import API from "../../services/api";
 import { AuthContext } from "../../context/AuthContext";
 
 
-export default function LoginForm(){
+export default function LoginForm() {
 
     const navigate = useNavigate();
 
     const { login } = useContext(AuthContext);
 
 
-    const [email,setEmail] = useState("");
+    const [email, setEmail] = useState("");
 
-    const [password,setPassword] = useState("");
+    const [password, setPassword] = useState("");
 
-    const [error,setError] = useState("");
+    const [error, setError] = useState("");
 
 
 
-    const handleLogin = async(e)=>{
+    const handleLogin = async (e) => {
 
         e.preventDefault();
 
         setError("");
 
 
-        try{
-
+        try {
 
             const res = await API.post(
                 "/auth/login",
@@ -39,19 +38,14 @@ export default function LoginForm(){
             );
 
 
-
-            login(
-                res.data.user,
-                res.data.token
-            );
-
+            // Store user + token correctly
+            login(res.data);
 
 
             navigate("/dashboard");
 
 
-        }
-        catch(err){
+        } catch (err) {
 
             setError(
                 err.response?.data?.message ||
@@ -74,7 +68,6 @@ export default function LoginForm(){
 
                 <div className="auth-header">
 
-
                     <h1>
                         Ticket QR
                     </h1>
@@ -84,7 +77,6 @@ export default function LoginForm(){
                         Login to manage your tickets
                     </p>
 
-
                 </div>
 
 
@@ -93,9 +85,7 @@ export default function LoginForm(){
                     error &&
 
                     <div className="auth-error">
-
                         {error}
-
                     </div>
 
                 }
@@ -120,9 +110,7 @@ export default function LoginForm(){
 
                             value={email}
 
-                            onChange={
-                                (e)=>setEmail(e.target.value)
-                            }
+                            onChange={(e)=>setEmail(e.target.value)}
 
                             required
 
@@ -149,21 +137,21 @@ export default function LoginForm(){
 
                             value={password}
 
-                            onChange={
-                                (e)=>setPassword(e.target.value)
-                            }
+                            onChange={(e)=>setPassword(e.target.value)}
 
                             required
 
                         />
-
 
                     </div>
 
 
 
 
-                    <button className="auth-btn">
+                    <button
+                        className="auth-btn"
+                        type="submit"
+                    >
 
                         Login
 
@@ -179,6 +167,7 @@ export default function LoginForm(){
 
                     Don't have an account?
 
+
                     <span
                         onClick={()=>{
                             navigate("/register")
@@ -186,6 +175,7 @@ export default function LoginForm(){
                     >
                         Register
                     </span>
+
 
                 </p>
 

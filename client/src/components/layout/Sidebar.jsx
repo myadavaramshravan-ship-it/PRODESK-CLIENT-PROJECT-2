@@ -1,12 +1,26 @@
-import { NavLink } from "react-router-dom";
 import { useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { AuthContext } from "../../context/AuthContext";
 
 
-export default function Sidebar(){
+export default function Sidebar() {
+
 
     const { logout } = useContext(AuthContext);
+
+    const navigate = useNavigate();
+
+
+
+    const handleLogout = () => {
+
+        logout();
+
+        navigate("/login");
+
+    };
+
 
 
     return (
@@ -14,9 +28,11 @@ export default function Sidebar(){
         <aside className="sidebar">
 
 
-            <div className="sidebar-logo">
+            <div className="sidebar-header">
 
-                Ticket QR
+                <h2>
+                    Ticket QR
+                </h2>
 
             </div>
 
@@ -26,30 +42,22 @@ export default function Sidebar(){
 
 
                 <NavLink to="/dashboard">
-
                     Dashboard
-
                 </NavLink>
 
 
                 <NavLink to="/tickets">
-
                     Tickets
-
                 </NavLink>
 
 
                 <NavLink to="/scanner">
-
                     Scanner
-
                 </NavLink>
 
 
                 <NavLink to="/profile">
-
                     Profile
-
                 </NavLink>
 
 
@@ -59,12 +67,13 @@ export default function Sidebar(){
 
             <button
                 className="logout-btn"
-                onClick={logout}
+                onClick={handleLogout}
             >
 
                 Logout
 
             </button>
+
 
 
         </aside>
