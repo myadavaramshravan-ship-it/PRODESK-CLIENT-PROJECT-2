@@ -58,9 +58,6 @@ const getAnalytics = async (req, res) => {
     });
   }
 };
-// ===============================
-// DASHBOARD
-// ===============================
 
 const getDashboard = async (req, res) => {
 

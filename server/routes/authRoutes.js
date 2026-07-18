@@ -11,22 +11,16 @@ const {
 
 const authMiddleware = require("../middleware/authMiddleware");
 
-
-// Register
 router.post(
     "/register",
     register
 );
 
-
-// Login
 router.post(
     "/login",
     login
 );
 
-
-// Get Profile
 router.get(
     "/profile",
     authMiddleware,

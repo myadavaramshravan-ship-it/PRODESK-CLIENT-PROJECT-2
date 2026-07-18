@@ -7,8 +7,6 @@ const {
     scanTicket
 } = require("../controllers/scanController");
 
-
-// POST /api/scan
 router.post(
     "/",
     authMiddleware,

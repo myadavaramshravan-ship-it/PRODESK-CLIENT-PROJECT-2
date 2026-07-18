@@ -22,23 +22,11 @@ const {
 
 } = require("../controllers/ticketController");
 
-
-
-// ===============================
-// CREATE TICKET
-// ===============================
-
 router.post(
     "/",
     authMiddleware,
     createTicket
 );
-
-
-
-// ===============================
-// GET ALL TICKETS
-// ===============================
 
 router.get(
     "/",
@@ -46,23 +34,11 @@ router.get(
     getTickets
 );
 
-
-
-// ===============================
-// GET SINGLE TICKET
-// ===============================
-
 router.get(
     "/:id",
     authMiddleware,
     getTicketById
 );
-
-
-
-// ===============================
-// UPDATE TICKET
-// ===============================
 
 router.put(
     "/:id",
@@ -71,11 +47,6 @@ router.put(
 );
 
 
-
-// ===============================
-// DELETE TICKET
-// ===============================
-
 router.delete(
     "/:id",
     authMiddleware,
@@ -83,22 +54,12 @@ router.delete(
 );
 
 
-
-// ===============================
-// SCAN QR
-// ===============================
-
 router.get(
     "/scan/:ticketNumber",
     authMiddleware,
     scanTicket
 );
 
-
-
-// ===============================
-// VALIDATE TICKET
-// ===============================
 
 router.put(
     "/validate/:ticketNumber",

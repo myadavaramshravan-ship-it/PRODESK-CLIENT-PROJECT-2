@@ -46,8 +46,6 @@
     margin-top:18px;
     text-align:center;
 }
-/* Dashboard Layout */
-
 
 .dashboard-layout{
 
@@ -57,21 +55,16 @@
 
 }
 
-
-
 .sidebar{
 
     width:260px;
     background:#111827;
     color:white;
     padding:30px 20px;
-
     display:flex;
     flex-direction:column;
 
 }
-
-
 
 .sidebar-logo{
 
@@ -81,8 +74,6 @@
 
 }
 
-
-
 .sidebar-nav{
 
     display:flex;
@@ -90,789 +81,366 @@
     gap:12px;
 
 }
-
-
-
 .sidebar-nav a{
-
     color:#cbd5e1;
     text-decoration:none;
     padding:12px 15px;
     border-radius:8px;
 
 }
-
-
-
 .sidebar-nav a.active{
-
     background:#2563eb;
     color:white;
 
 }
-
-
-
 .logout-btn{
-
     margin-top:auto;
     padding:12px;
-
     border:none;
     border-radius:8px;
-
     background:#dc2626;
     color:white;
-
 }
-
-
 
 .dashboard-main{
-
     flex:1;
-
 }
-
-
-
 .navbar{
-
     height:70px;
     background:white;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:0 30px;
-
     border-bottom:1px solid #e5e7eb;
-
 }
-
-
-
 .dashboard-content{
-
     padding:30px;
-
 }
-/* Dashboard Cards Horizontal Layout */
 
 .dashboard-cards{
-
     display:flex;
-
     gap:24px;
-
     width:100%;
-
     margin-top:30px;
-
 }
-
 
 .stats-card{
-
     flex:1;
-
     background:white;
-
     padding:25px;
-
     border-radius:14px;
-
     border:1px solid #e5e7eb;
-
     min-height:130px;
-
     transition:.3s;
-
 }
-
-
 .stats-card:hover{
-
     transform:translateY(-4px);
-
     box-shadow:
     0 12px 25px rgba(0,0,0,.08);
-
 }
-
-
 .stats-title{
-
     color:#64748b;
-
     font-size:14px;
-
     margin-bottom:12px;
-
 }
-
 
 .stats-value{
-
     font-size:32px;
-
     font-weight:700;
-
     color:#111827;
-
 }
-
-
-/* Responsive */
 
 @media(max-width:900px){
-
     .dashboard-cards{
-
         flex-wrap:wrap;
-
     }
-
-
     .stats-card{
-
         min-width:250px;
-
     }
-
 }
-
-
 @media(max-width:600px){
-
     .dashboard-cards{
-
         flex-direction:column;
-
     }
-
 }
-/* ==========================
-   TICKET TABLE PREMIUM UI
-========================== */
-
-
 .ticket-table-container{
-
     background:#ffffff;
-
     border-radius:20px;
-
     padding:30px;
-
     border:1px solid #e5e7eb;
-
     box-shadow:
     0 10px 30px rgba(15,23,42,.06);
 
 }
-
-
-
 .ticket-table-top{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     margin-bottom:30px;
-
 }
-
-
 
 .ticket-table-top h2{
-
     font-size:24px;
-
     color:#0f172a;
-
     margin-bottom:6px;
-
 }
-
-
-
 .ticket-table-top p{
-
     color:#64748b;
-
     font-size:14px;
-
 }
-
-
-
 .ticket-count{
-
     background:#f1f5f9;
-
     padding:10px 18px;
-
     border-radius:30px;
-
     font-weight:600;
-
     color:#334155;
-
 }
-
-
 
 .table-scroll{
-
     overflow-x:auto;
-
 }
-
-
-
 .modern-table{
-
     width:100%;
-
     border-collapse:separate;
-
     border-spacing:0 12px;
-
 }
-
-
-
 .modern-table thead th{
-
     padding:12px 18px;
-
     color:#64748b;
-
     font-size:13px;
-
     text-transform:uppercase;
-
     letter-spacing:.5px;
-
     text-align:left;
-
 }
-
-
-
 .modern-table tbody tr{
-
     background:#f8fafc;
-
     transition:.25s;
-
 }
-
-
-
 .modern-table tbody tr:hover{
-
     background:#f1f5f9;
-
     transform:scale(1.01);
-
 }
-
-
 
 .modern-table td{
-
     padding:18px;
-
 }
-
-
-
 .modern-table td:first-child{
-
-    border-radius:14px 0 0 14px;
-
+    border-radius:14px 0 0 14px
 }
-
-
 
 .modern-table td:last-child{
-
     border-radius:0 14px 14px 0;
-
 }
-
-
 
 .ticket-id{
-
     background:#e0e7ff;
-
     color:#3730a3;
-
     padding:7px 14px;
-
     border-radius:10px;
-
     font-weight:700;
-
     font-size:13px;
-
 }
-
-
-
 .customer-box{
-
     display:flex;
-
     flex-direction:column;
-
     gap:5px;
-
 }
-
-
 
 .customer-box strong{
-
     color:#0f172a;
-
 }
-
-
-
 .customer-box small{
-
     color:#64748b;
-
 }
-
-
-
 .event-name{
-
     font-weight:600;
-
     color:#334155;
-
 }
-
-
-
 .ticket-status{
-
     padding:7px 15px;
-
     border-radius:20px;
-
     font-size:13px;
-
     font-weight:700;
-
     text-transform:capitalize;
-
 }
-
-
-
 .ticket-status.active{
-
     background:#dcfce7;
-
     color:#15803d;
-
 }
-
-
-
 .ticket-status.used{
-
     background:#dbeafe;
-
     color:#1d4ed8;
-
 }
-
-
-
 .ticket-status.cancelled{
-
     background:#fee2e2;
-
     color:#dc2626;
-
 }
-
-
-
 .qr-action{
-
     padding:9px 18px;
-
     border:none;
-
     border-radius:10px;
-
     background:#0f172a;
-
     color:white;
-
     font-weight:600;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
-
-
 
 .qr-action:hover{
-
     transform:translateY(-2px);
-
 }
-
-
-
 .table-loading,
 .empty-ticket{
-
     padding:50px;
-
     text-align:center;
-
     color:#64748b;
-
 }
-/* ==========================
-   CREATE TICKET FORM UI
-========================== */
-
 
 .create-ticket-card{
-
     background:white;
-
     padding:30px;
-
     border-radius:20px;
-
     border:1px solid #e5e7eb;
-
     box-shadow:
     0 10px 30px rgba(15,23,42,.06);
-
 }
-
-
-
 .form-header{
-
     margin-bottom:28px;
-
 }
-
-
-
 .form-header h2{
-
     font-size:24px;
-
     color:#0f172a;
-
     margin-bottom:8px;
-
 }
-
-
 
 .form-header p{
-
     color:#64748b;
-
     font-size:14px;
-
 }
-
-
-
 .ticket-create-form{
-
     display:flex;
-
     flex-direction:column;
-
     gap:20px;
-
 }
-
-
-
 .form-group{
-
     display:flex;
-
     flex-direction:column;
-
     gap:8px;
-
 }
-
-
 
 .form-group label{
-
     font-size:14px;
-
     font-weight:600;
-
     color:#334155;
-
 }
-
-
-
 .form-group input{
-
     width:100%;
-
     padding:14px 16px;
-
     border-radius:12px;
-
     border:1px solid #cbd5e1;
-
     outline:none;
-
     font-size:15px;
-
     transition:.25s;
-
 }
-
-
-
 .form-group input:focus{
-
     border-color:#2563eb;
-
     box-shadow:
     0 0 0 3px rgba(37,99,235,.15);
-
 }
-
-
-
 .create-ticket-btn{
-
     margin-top:10px;
-
     padding:14px;
-
     border:none;
-
     border-radius:12px;
-
     background:#0f172a;
-
     color:white;
-
     font-size:15px;
-
     font-weight:700;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
-
-
-
 .create-ticket-btn:hover{
-
     transform:translateY(-2px);
-
 }
-
-
-
 .create-ticket-btn:disabled{
-
     opacity:.6;
-
     cursor:not-allowed;
-
 }.sidebar{
-
     position:fixed;
-
     left:0;
-
     top:0;
-
     bottom:0;
-
     overflow-y:auto;
-
 }
-
-
 .dashboard-main{
-
     margin-left:290px;
-
     width:calc(100% - 260px);
-
 }
-/* ==========================
-   STICKY NAVBAR
-========================== */
 
 .navbar{
-
     height:70px;
-
     background:white;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     padding:0 px;
-
     border-bottom:1px solid #e5e7eb;
-
-
     position:sticky;
-
     top:0;
-
     z-index:100;
-
-
 }
-/* ==========================
-   QR MODAL
-========================== */
-
 
 .qr-overlay{
-
     position:fixed;
-
     inset:0;
-
     background:rgba(15,23,42,.55);
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     z-index:200;
-
 }
-
-
 
 .qr-modal{
-
     width:200px;
-
     background:white;
-
     border-radius:20px;
-
     padding:30px;
-
     position:relative;
-
     text-align:center;
-
     box-shadow:
     0 25px 60px rgba(0,0,0,.2);
-
 }
-
-
-
 .qr-modal h2{
-
     margin-bottom:25px;
-
 }
-
-
 
 .qr-close{
-
     position:absolute;
-
     right:20px;
-
     top:15px;
-
     border:none;
-
     background:none;
-
     font-size:28px;
-
     cursor:pointer;
-
     color:#64748b;
-
 }
-
-
-
 .qr-image{
-
     width:300px;
-
     height:100px;
-
     object-fit:contain;
-
     margin-bottom:25px;
-
 }
-
-
-
 .qr-details{
-
     text-align:left;
-
     background:#f8fafc;
-
     padding:20px;
-
     border-radius:14px;
-
 }
-
-
-
 .qr-details p{
-
     margin-bottom:12px;
-
     color:#334155;
-
 }
-
 
 .qr-details strong{
 
@@ -910,11 +478,7 @@
 
     border:1px solid #e5e7eb;
 
-}/* =================================
-   CREATE TICKET PAGE
-================================= */
-
-
+}
 .ticket-create-container{
 
     width:100%;
@@ -1211,9 +775,7 @@
 
 
 }
-/* ==========================
-   SMALL QR SCANNER
-========================== */
+
 
 
 .qr-reader{
@@ -1250,17 +812,10 @@
 
 }
 
-
-
-/* Hide extra scanner text */
-
 #reader__dashboard_section_csr span{
 
     font-size:12px;
-
 }
-
-
 
 #reader button{
 
@@ -1277,9 +832,6 @@
     cursor:pointer;
 
 }
-/* ==========================
-   SCAN RESULT
-========================== */
 
 .scan-result{
 
@@ -1500,9 +1052,6 @@
     }
 
 }
-/* ==========================
-   EDIT MODAL
-========================== */
 
 .modal-overlay{
 
@@ -1656,9 +1205,6 @@
     background:#b91c1c;
 
 }
-/* ==========================
-   RECENT TICKETS
-========================== */
 
 .recent-ticket-card{
 
@@ -1820,8 +1366,6 @@
     font-size:20px;
 
 }
-/* ================= PROFILE ================= */
-
 
 .profile-page{
 
@@ -1938,8 +1482,6 @@
     font-weight:600;
 
 }
-/* ================= AUTH PAGE ================= */
-
 .auth-page{
 
     min-height:100vh;
@@ -1955,10 +1497,6 @@
     padding:20px;
 
 }
-
-
-
-/* ================= AUTH LOGIN ================= */
 
 .auth-card{
 
@@ -1976,7 +1514,6 @@
 }
 
 
-/* Header */
 
 .auth-header{
 
@@ -2010,9 +1547,6 @@
 
 }
 
-
-
-/* Input */
 
 .input-group{
 
@@ -2057,9 +1591,6 @@
 }
 
 
-
-/* Button */
-
 .auth-btn{
 
     width:100%;
@@ -2084,9 +1615,6 @@
 
 }
 
-
-
-/* Footer */
 
 .auth-footer{
 

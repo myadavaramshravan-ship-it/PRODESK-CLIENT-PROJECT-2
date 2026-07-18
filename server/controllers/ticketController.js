@@ -1,12 +1,6 @@
 const Ticket = require("../models/Ticket");
 const QRCode = require("qrcode");
 
-
-
-// ===============================
-// CREATE TICKET
-// ===============================
-
 const createTicket = async(req,res)=>{
 
     try{
@@ -86,14 +80,6 @@ const createTicket = async(req,res)=>{
     }
 
 };
-
-
-
-
-// ===============================
-// GET ALL TICKETS
-// ===============================
-
 const getTickets = async(req,res)=>{
 
     try{
@@ -130,15 +116,6 @@ const getTickets = async(req,res)=>{
     }
 
 };
-
-
-
-
-
-// ===============================
-// GET SINGLE TICKET
-// ===============================
-
 const getTicketById = async(req,res)=>{
 
 
@@ -175,9 +152,6 @@ const getTicketById = async(req,res)=>{
 
 
 };
-// ===============================
-// UPDATE TICKET
-// ===============================
 
 const updateTicket = async (req, res) => {
 
@@ -238,13 +212,6 @@ const updateTicket = async (req, res) => {
 };
 
 
-
-
-
-// ===============================
-// DELETE TICKET
-// ===============================
-
 const deleteTicket = async(req,res)=>{
 
 
@@ -280,15 +247,6 @@ const deleteTicket = async(req,res)=>{
 
 
 };
-
-
-
-
-
-// ===============================
-// FIND TICKET USING QR
-// ===============================
-
 const scanTicket = async(req,res)=>{
 
 
@@ -342,15 +300,6 @@ const scanTicket = async(req,res)=>{
     }
 
 };
-
-
-
-
-
-// ===============================
-// VALIDATE TICKET
-// ACTIVE -> USED
-// ===============================
 
 const validateTicket = async(req,res)=>{
 

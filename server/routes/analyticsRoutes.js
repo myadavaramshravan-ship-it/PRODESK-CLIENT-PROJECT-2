@@ -15,11 +15,6 @@ const {
 } = require("../controllers/analyticsController");
 
 
-
-// ===============================
-// DASHBOARD
-// ===============================
-
 router.get(
     "/dashboard",
     authMiddleware,
@@ -27,22 +22,11 @@ router.get(
 );
 
 
-
-// ===============================
-// GET ANALYTICS LOGS
-// ===============================
-
 router.get(
     "/",
     authMiddleware,
     getAnalytics
 );
-
-
-
-// ===============================
-// CREATE ANALYTICS LOG
-// ===============================
 
 router.post(
     "/",

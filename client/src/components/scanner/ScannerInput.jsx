@@ -48,7 +48,6 @@ const ScannerInput = () => {
                     const qr = JSON.parse(decodedText);
                     ticketNumber = qr.ticketNumber;
                     } catch {
-    // QR already contains plain text
                    }
 
                    const response = await API.put(
@@ -147,9 +146,9 @@ const ScannerInput = () => {
                 className="qr-reader"
             ></div>
 
-          {/* ==========================
-    SCAN SUCCESS
-========================== */}
+          {
+
+          }
 
 {
     ticket && (
@@ -307,9 +306,6 @@ const ScannerInput = () => {
 
 
 
-{/* ==========================
-    SCAN FAILED
-========================== */}
 
 {
     error && (

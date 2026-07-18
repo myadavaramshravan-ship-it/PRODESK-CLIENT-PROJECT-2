@@ -6,10 +6,6 @@ require("dotenv").config();
 const app = express();
 
 
-/* =========================
-   Middleware
-========================= */
-
 app.use(
     cors({
         origin:[
@@ -25,11 +21,6 @@ app.use(
 
 app.use(express.json());
 
-
-/* =========================
-   Routes
-========================= */
-
 const authRoutes = require("./routes/authRoutes");
 const ticketRoutes = require("./routes/ticketRoutes");
 const analyticsRoutes = require("./routes/analyticsRoutes");
@@ -39,12 +30,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/tickets", ticketRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
-
-
-/* =========================
-   Health Check
-========================= */
-
 app.get("/",(req,res)=>{
 
     res.json({
@@ -53,12 +38,6 @@ app.get("/",(req,res)=>{
     });
 
 });
-
-
-
-/* =========================
-   MongoDB
-========================= */
 
 mongoose
 .connect(process.env.MONGO_URI)
@@ -72,12 +51,6 @@ mongoose
     console.log(error);
 
 });
-
-
-
-/* =========================
-   Server
-========================= */
 
 const PORT = process.env.PORT || 5000;
 
